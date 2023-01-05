@@ -30,7 +30,7 @@ The settings menu click is handled as follows:
         .
         private void onClickSettingsMenu(object? sender, EventArgs e)
         {
-            if(DialogResult.OK.Equals(_settings.ShowDialog(this)))
+            if(DialogResult.OK.Equals(_settings.ShowDialog()))
             {
                 sort();
             }

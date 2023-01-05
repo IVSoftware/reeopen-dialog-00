@@ -33,5 +33,10 @@ namespace reeopen_dialog_00
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
         }
         public SortType SortType { get; set; }
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            Location = new Point(Owner.Location.X + Owner.Width, Location.Y);
+        }
     }
 }
